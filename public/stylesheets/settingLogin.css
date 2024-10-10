@@ -1,0 +1,81 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: rgb(216, 157, 157);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    padding: 40px;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333;
+}
+
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 25px;
+    background-color: #f0f0f0;
+    font-size: 16px;
+}
+
+.login-container input[type="password"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(105, 151, 207, 0.8);
+}
+
+.login-container button {
+    background: linear-gradient(90deg, #6a85b6, #bac8e0);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-container button:hover {
+    background: linear-gradient(90deg, #5d77a3, #a2b8d3);
+}
+
+.login-container a {
+    color: #6a85b6;
+    text-decoration: none;
+    display: block;
+    margin-top: 20px;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+/* Position the return to homepage link at the top-left corner */
+.top-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px; /* Add a small margin from the corner */
+    font-size: 14px;
+}

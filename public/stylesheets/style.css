@@ -1,0 +1,112 @@
+body {
+  padding: 0px;
+  background: linear-gradient(to bottom, pink, rgb(159, 196, 196));
+  font-family: 'Roboto Slab', serif;
+  color: rgb(116, 61, 116);
+  min-height: 1000px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Noto Serif SC', serif;
+  margin-left: 30vw;
+  margin-right: auto;
+}
+
+nav {
+  width: 99vw;
+  height: 150px;
+  display: flex;
+  font-size: 30px;
+}
+
+ol {
+  display: flex;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 80px;
+  list-style: none;
+  overflow-x: scroll;
+}
+
+ol li {
+  text-align: center;
+  height: 450px;
+  margin-right: 20px;
+  padding: 10px;
+}
+
+ol li p {
+  word-wrap: break-word; /* 允许在单词内换行 */
+  overflow-wrap: break-word; /* 允许在单词内换行 */
+  max-width: 300px; /* 设置段落最大宽度，超过这个宽度时将自动换行 */
+}
+
+form {
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 0px;
+}
+
+input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid black;
+  margin-bottom: 10px;
+  margin-right: 30px;
+}
+
+input[type="file"] {
+  border: none;
+  outline: none;
+  
+}
+
+input[type="text"] {
+  text-align: center;
+  color: rgb(116, 61, 116);
+  border: none;
+  border-bottom: 2px solid rgb(116, 61, 116);
+  outline: none;
+}
+
+#description {
+  width: 160px;
+}
+
+#username {
+  width: 200px;
+}
+
+#submit {
+  background-color: rgb(116, 61, 116);
+  border: none;
+  border-radius: 10px;
+  height: 30px;
+  width: 260px;
+  text-align: center;
+  color: white;
+  margin-top: 5px;
+}
+
+#reset {
+  background-color: rgb(116, 61, 116);
+  border: none;
+  border-radius: 10px;
+  height: 30px;
+  width: 260px;
+  text-align: center;
+  color: white;
+  margin-top: 5px;
+}
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav>
+      <img src="/images/logo.png" alt="logo">
+      <h1><%= title %></h1>
+    </nav>
+    <ol>
+      <% for (let i = 0; i < data.length; i++) { %>
+        <li>
+          <h2><%= i %>. <%= data[i].name %></h2>
+          <img src='/images/<%= data[i].img%>' alt="<%= data[i].name %>">
+          <p><%= data[i].des %></p>
+        </li>
+      <% } %>
+    </ol>    
+    <form action="/game" method="post" enctype="multipart/form-data">
+      
+      Name: <input type="text" name="username" id="username"><br>
+      Description: <input type="text" name="description" id="description"><br>
+      Evidence: <input type="file" name="file"><br>
+      <button type="submit" id="submit">Submit</button>
+    </form>
+    <form action="/game/reset" method="post">
+      <button id="reset">Reset</button>
+    </form>
+  </body>
+</html>

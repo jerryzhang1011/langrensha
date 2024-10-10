@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/langrensha.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>狼人杀</h1>
+    <div id="langrensha-player-role">
+        <div id="player-role">
+            <%= role %>
+        </div>  
+        <div>
+            <form action="/getrole" method="get">
+                <button id="getrole" type="submit">Get Role</button>
+            </form>
+        </div>
+        <div>
+            <% if (repeatedReq == true) { %>
+                <p style="color: red;">
+                    You cannot request twice
+                </p>
+            <% } %>
+        </div>
+    </div>
+    <footer>
+        <p>Go to <a href="/settingLogin">/setting</a> to set up the Game.</p>
+        <p>Go to <a href="/shangdi">/shangdi</a> if you are shangdi</p>
+    </footer>
+</body>
+</html>
