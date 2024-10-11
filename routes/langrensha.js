@@ -9,11 +9,13 @@ let pingming = 0;
 let nvwu = 0;
 let lieren = 0;
 let shouwei = 0;
+let langwang = 0;
 let li = [];
 let userIPs = {};
 let setGame = false
 
 function init() {
+  langwang = 0;
   langren = 0;
   yuyanjia = 0;
   pingming = 0;
@@ -52,8 +54,9 @@ router.post('/setting', function(req, res, next) {
   nvwu =  req.body.nvwu;
   lieren = req.body.lieren;
   shouwei =  req.body.shouwei;
+  langwang = req.body.langwang;
 
-  if (isNaN(langren) || isNaN(yuyanjia) || isNaN(pingming) || isNaN(nvwu) || isNaN(lieren) || isNaN(shouwei)) {
+  if (isNaN(langren) || isNaN(yuyanjia) || isNaN(pingming) || isNaN(nvwu) || isNaN(lieren) || isNaN(shouwei) || isNaN(langwang)) {
     res.redirect('/setting');
     return;
   }
@@ -64,6 +67,7 @@ router.post('/setting', function(req, res, next) {
   nvwu = Number(nvwu);
   lieren = Number(lieren);
   shouwei = Number(shouwei);
+  langwang = Number(langwang);
 
   li = [
         ['狼人', langren], 
@@ -71,7 +75,8 @@ router.post('/setting', function(req, res, next) {
         ['平民', pingming], 
         ['女巫', nvwu], 
         ['猎人', lieren],
-        ['守卫', shouwei]
+        ['守卫', shouwei],
+        ['狼王', langwang]
       ];
 
   res.render('langrensha', {role: 'None', repeatedReq: false}, );
